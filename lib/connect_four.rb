@@ -17,6 +17,11 @@ class ConnectFour
   end
 
   def update_display
+    width.times do |j|
+      print "#{j + 1} "
+    end
+    puts
+
     (height - 1).downto(0) do |i|
       str = ""
 
@@ -30,6 +35,7 @@ class ConnectFour
 
       puts str
     end
+    puts ""
   end
 
   def game_over?(column_number, row_number, chip_type)
