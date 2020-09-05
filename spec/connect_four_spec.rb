@@ -1,4 +1,5 @@
 require "./lib/connect_four"
+require "pry"
 
 describe ConnectFour do
   subject { ConnectFour.new }
