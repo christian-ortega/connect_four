@@ -1,5 +1,4 @@
 require "./lib/connect_four"
-require "pry"
 
 describe ConnectFour do
   subject { ConnectFour.new }
@@ -88,7 +87,7 @@ describe ConnectFour do
       subject.place_chip(6, "O")
       subject.place_chip(6, "@")
       subject.place_chip(6, "O")
-      
+
       expect(subject.place_chip(6, "@")).to eql(true)
     end
 
