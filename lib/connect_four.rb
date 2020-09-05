@@ -17,7 +17,19 @@ class ConnectFour
   end
 
   def update_display
+    (height - 1).downto(0) do |i|
+      str = ""
 
+      0.upto(width - 1) do |j|
+        if grid[j][i].nil?
+          str += "· "          
+        else
+          str += "#{grid[j][i]} "
+        end
+      end
+
+      puts str
+    end
   end
 
   def game_over?(column_number, row_number, chip_type)
